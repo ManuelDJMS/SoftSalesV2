@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Presentacion
@@ -13,6 +14,8 @@ namespace Presentacion
         private void FrmMenu_Load(object sender, EventArgs e)
         {
             Guna.UI.Lib.GraphicsHelper.ShadowForm(this);
+           
+           
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -36,5 +39,28 @@ namespace Presentacion
             PanelLateral.Width = 175;
             gunaTransition1.ShowSync(PanelLateral);
         }
+        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        {
+            Form formulario;
+            formulario = PanelFormularios.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
+                                                                                     //si el formulario/instancia no existe
+            if (formulario == null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+                PanelFormularios.Controls.Add(formulario);
+                PanelFormularios.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+            }
+            //si el formulario/instancia existe
+            else
+            {
+                formulario.BringToFront();
+            }
+        }
+     
     }
 }

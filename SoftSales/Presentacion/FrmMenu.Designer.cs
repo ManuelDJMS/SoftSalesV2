@@ -30,15 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             Guna.UI.WinForms.GunaResize gunaResize1;
-            Guna.UI.Animation.Animation animation2 = new Guna.UI.Animation.Animation();
+            Guna.UI.Animation.Animation animation1 = new Guna.UI.Animation.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.PnTop = new Guna.UI.WinForms.GunaPanel();
+            this.ImgIcon = new System.Windows.Forms.PictureBox();
+            this.LbIcon = new System.Windows.Forms.Label();
             this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox3 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
-            this.LbIcon = new System.Windows.Forms.Label();
             this.PanelLateral = new Guna.UI.WinForms.GunaPanel();
             this.gunaAdvenceButton9 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
@@ -47,15 +48,14 @@
             this.gunaAdvenceButton6 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaAdvenceButton5 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.ImgIcon = new System.Windows.Forms.PictureBox();
             this.gunaTransition1 = new Guna.UI.WinForms.GunaTransition(this.components);
+            this.PanelFormularios = new System.Windows.Forms.Panel();
             this.btnShow = new Guna.UI.WinForms.GunaCircleButton();
             this.btnClose = new Guna.UI.WinForms.GunaCircleButton();
-            this.PanelFormularios = new System.Windows.Forms.Panel();
             gunaResize1 = new Guna.UI.WinForms.GunaResize(this.components);
             this.PnTop.SuspendLayout();
-            this.PanelLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImgIcon)).BeginInit();
+            this.PanelLateral.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaResize1
@@ -73,17 +73,40 @@
             // PnTop
             // 
             this.PnTop.BackColor = System.Drawing.Color.White;
+            this.PnTop.Controls.Add(this.LbIcon);
+            this.PnTop.Controls.Add(this.ImgIcon);
             this.PnTop.Controls.Add(this.gunaControlBox2);
             this.PnTop.Controls.Add(this.gunaControlBox3);
             this.PnTop.Controls.Add(this.gunaControlBox1);
-            this.PnTop.Controls.Add(this.ImgIcon);
-            this.PnTop.Controls.Add(this.LbIcon);
             this.gunaTransition1.SetDecoration(this.PnTop, Guna.UI.Animation.DecorationType.None);
             this.PnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.PnTop.Location = new System.Drawing.Point(0, 0);
             this.PnTop.Name = "PnTop";
             this.PnTop.Size = new System.Drawing.Size(984, 31);
             this.PnTop.TabIndex = 2;
+            // 
+            // ImgIcon
+            // 
+            this.gunaTransition1.SetDecoration(this.ImgIcon, Guna.UI.Animation.DecorationType.None);
+            this.ImgIcon.Image = global::Presentacion.Properties.Resources.LOGO2;
+            this.ImgIcon.Location = new System.Drawing.Point(0, -3);
+            this.ImgIcon.Name = "ImgIcon";
+            this.ImgIcon.Size = new System.Drawing.Size(57, 43);
+            this.ImgIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ImgIcon.TabIndex = 0;
+            this.ImgIcon.TabStop = false;
+            // 
+            // LbIcon
+            // 
+            this.LbIcon.AutoSize = true;
+            this.gunaTransition1.SetDecoration(this.LbIcon, Guna.UI.Animation.DecorationType.None);
+            this.LbIcon.Font = new System.Drawing.Font("Eras Light ITC", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.LbIcon.Location = new System.Drawing.Point(40, 4);
+            this.LbIcon.Name = "LbIcon";
+            this.LbIcon.Size = new System.Drawing.Size(132, 27);
+            this.LbIcon.TabIndex = 1;
+            this.LbIcon.Text = "SOFT-SALES";
             // 
             // gunaControlBox2
             // 
@@ -100,7 +123,7 @@
             this.gunaControlBox2.Name = "gunaControlBox2";
             this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(237)))), ((int)(((byte)(243)))));
             this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.Black;
-            this.gunaControlBox2.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaControlBox2.OnPressedColor = System.Drawing.Color.Blue;
             this.gunaControlBox2.Size = new System.Drawing.Size(32, 32);
             this.gunaControlBox2.TabIndex = 3;
             // 
@@ -141,18 +164,6 @@
             this.gunaControlBox1.Size = new System.Drawing.Size(32, 32);
             this.gunaControlBox1.TabIndex = 1;
             // 
-            // LbIcon
-            // 
-            this.LbIcon.AutoSize = true;
-            this.gunaTransition1.SetDecoration(this.LbIcon, Guna.UI.Animation.DecorationType.None);
-            this.LbIcon.Font = new System.Drawing.Font("Eras Light ITC", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
-            this.LbIcon.Location = new System.Drawing.Point(40, 4);
-            this.LbIcon.Name = "LbIcon";
-            this.LbIcon.Size = new System.Drawing.Size(132, 27);
-            this.LbIcon.TabIndex = 1;
-            this.LbIcon.Text = "SOFT-SALES";
-            // 
             // PanelLateral
             // 
             this.PanelLateral.BackColor = System.Drawing.Color.White;
@@ -172,6 +183,7 @@
             // 
             // gunaAdvenceButton9
             // 
+            this.gunaAdvenceButton9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.gunaAdvenceButton9.AnimationHoverSpeed = 0.07F;
             this.gunaAdvenceButton9.AnimationSpeed = 0.03F;
             this.gunaAdvenceButton9.BaseColor = System.Drawing.Color.White;
@@ -204,6 +216,7 @@
             // 
             // gunaSeparator1
             // 
+            this.gunaSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.gunaTransition1.SetDecoration(this.gunaSeparator1, Guna.UI.Animation.DecorationType.None);
             this.gunaSeparator1.LineColor = System.Drawing.Color.Silver;
             this.gunaSeparator1.Location = new System.Drawing.Point(0, 400);
@@ -242,6 +255,7 @@
             this.gunaAdvenceButton8.Size = new System.Drawing.Size(175, 42);
             this.gunaAdvenceButton8.TabIndex = 9;
             this.gunaAdvenceButton8.Text = "Categorias";
+         
             // 
             // gunaAdvenceButton7
             // 
@@ -371,40 +385,39 @@
             this.gunaAdvenceButton1.TabIndex = 2;
             this.gunaAdvenceButton1.Text = "Artículos";
             // 
-            // ImgIcon
-            // 
-            this.gunaTransition1.SetDecoration(this.ImgIcon, Guna.UI.Animation.DecorationType.None);
-            this.ImgIcon.Image = global::Presentacion.Properties.Resources.sale;
-            this.ImgIcon.Location = new System.Drawing.Point(4, -1);
-            this.ImgIcon.Name = "ImgIcon";
-            this.ImgIcon.Size = new System.Drawing.Size(32, 32);
-            this.ImgIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ImgIcon.TabIndex = 0;
-            this.ImgIcon.TabStop = false;
-            // 
             // gunaTransition1
             // 
             this.gunaTransition1.AnimationType = Guna.UI.Animation.AnimationType.HorizBlind;
             this.gunaTransition1.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.gunaTransition1.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.gunaTransition1.DefaultAnimation = animation1;
+            // 
+            // PanelFormularios
+            // 
+            this.gunaTransition1.SetDecoration(this.PanelFormularios, Guna.UI.Animation.DecorationType.None);
+            this.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelFormularios.Location = new System.Drawing.Point(175, 31);
+            this.PanelFormularios.Name = "PanelFormularios";
+            this.PanelFormularios.Size = new System.Drawing.Size(809, 530);
+            this.PanelFormularios.TabIndex = 6;
             // 
             // btnShow
             // 
+            this.btnShow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnShow.AnimationHoverSpeed = 0.07F;
             this.btnShow.AnimationSpeed = 0.03F;
             this.btnShow.BackColor = System.Drawing.Color.Transparent;
@@ -434,6 +447,7 @@
             // 
             // btnClose
             // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnClose.AnimationHoverSpeed = 0.07F;
             this.btnClose.AnimationSpeed = 0.03F;
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
@@ -460,15 +474,6 @@
             this.btnClose.UseTransfarantBackground = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // PanelFormularios
-            // 
-            this.gunaTransition1.SetDecoration(this.PanelFormularios, Guna.UI.Animation.DecorationType.None);
-            this.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelFormularios.Location = new System.Drawing.Point(175, 31);
-            this.PanelFormularios.Name = "PanelFormularios";
-            this.PanelFormularios.Size = new System.Drawing.Size(809, 530);
-            this.PanelFormularios.TabIndex = 6;
-            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,8 +494,8 @@
             this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.PnTop.ResumeLayout(false);
             this.PnTop.PerformLayout();
-            this.PanelLateral.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ImgIcon)).EndInit();
+            this.PanelLateral.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
