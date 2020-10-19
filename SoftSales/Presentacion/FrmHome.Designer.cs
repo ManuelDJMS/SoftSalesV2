@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Guna.UI.Animation.Animation animation1 = new Guna.UI.Animation.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHome));
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.PanelLateral = new Guna.UI.WinForms.GunaPanel();
             this.btnAjustes = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -52,6 +54,7 @@
             this.PanelFormularios = new Guna.UI.WinForms.GunaPanel();
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.gunaAnimateWindow1 = new Guna.UI.WinForms.GunaAnimateWindow(this.components);
+            this.gunaTransition1 = new Guna.UI.WinForms.GunaTransition(this.components);
             this.PanelLateral.SuspendLayout();
             this.gunaPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnOcultarMenu)).BeginInit();
@@ -74,6 +77,7 @@
             this.PanelLateral.Controls.Add(this.label1);
             this.PanelLateral.Controls.Add(this.btnOcultarMenu);
             this.PanelLateral.Controls.Add(this.pictureBox4);
+            this.gunaTransition1.SetDecoration(this.PanelLateral, Guna.UI.Animation.DecorationType.None);
             this.PanelLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelLateral.Location = new System.Drawing.Point(0, 0);
             this.PanelLateral.Name = "PanelLateral";
@@ -94,6 +98,7 @@
             this.btnAjustes.CheckedImage = null;
             this.btnAjustes.CheckedLineColor = System.Drawing.Color.Transparent;
             this.btnAjustes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnAjustes, Guna.UI.Animation.DecorationType.None);
             this.btnAjustes.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnAjustes.FocusedColor = System.Drawing.Color.Empty;
             this.btnAjustes.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -111,11 +116,12 @@
             this.btnAjustes.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
             this.btnAjustes.Size = new System.Drawing.Size(182, 45);
             this.btnAjustes.TabIndex = 6;
-            this.btnAjustes.Text = "Ventas";
+            this.btnAjustes.Text = "Ajustes";
             // 
             // gunaSeparator1
             // 
             this.gunaSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.gunaTransition1.SetDecoration(this.gunaSeparator1, Guna.UI.Animation.DecorationType.None);
             this.gunaSeparator1.LineColor = System.Drawing.Color.Silver;
             this.gunaSeparator1.Location = new System.Drawing.Point(0, 556);
             this.gunaSeparator1.Name = "gunaSeparator1";
@@ -129,6 +135,7 @@
             this.gunaPanel3.Controls.Add(this.btnClientes);
             this.gunaPanel3.Controls.Add(this.btnCategorias);
             this.gunaPanel3.Controls.Add(this.btnInicio);
+            this.gunaTransition1.SetDecoration(this.gunaPanel3, Guna.UI.Animation.DecorationType.None);
             this.gunaPanel3.Location = new System.Drawing.Point(0, 36);
             this.gunaPanel3.Name = "gunaPanel3";
             this.gunaPanel3.Size = new System.Drawing.Size(182, 229);
@@ -148,6 +155,7 @@
             this.btnVentas.CheckedImage = global::Presentacion.Properties.Resources.icons8_cash_register_28;
             this.btnVentas.CheckedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(242)))), ((int)(((byte)(147)))));
             this.btnVentas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnVentas, Guna.UI.Animation.DecorationType.None);
             this.btnVentas.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnVentas.FocusedColor = System.Drawing.Color.Empty;
             this.btnVentas.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -182,6 +190,7 @@
             this.btnCompras.CheckedImage = global::Presentacion.Properties.Resources.icons8_transaction_28;
             this.btnCompras.CheckedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(136)))), ((int)(((byte)(109)))));
             this.btnCompras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnCompras, Guna.UI.Animation.DecorationType.None);
             this.btnCompras.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCompras.FocusedColor = System.Drawing.Color.Empty;
             this.btnCompras.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -216,6 +225,7 @@
             this.btnClientes.CheckedImage = global::Presentacion.Properties.Resources.icons8_contacts_28;
             this.btnClientes.CheckedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(212)))), ((int)(((byte)(241)))));
             this.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnClientes, Guna.UI.Animation.DecorationType.None);
             this.btnClientes.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnClientes.FocusedColor = System.Drawing.Color.Empty;
             this.btnClientes.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -250,6 +260,7 @@
             this.btnCategorias.CheckedImage = global::Presentacion.Properties.Resources.icons8_categorize_28;
             this.btnCategorias.CheckedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(108)))), ((int)(((byte)(128)))));
             this.btnCategorias.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnCategorias, Guna.UI.Animation.DecorationType.None);
             this.btnCategorias.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCategorias.FocusedColor = System.Drawing.Color.Empty;
             this.btnCategorias.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -283,6 +294,7 @@
             this.btnInicio.CheckedImage = global::Presentacion.Properties.Resources.icons8_home_28;
             this.btnInicio.CheckedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(82)))), ((int)(((byte)(225)))));
             this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnInicio, Guna.UI.Animation.DecorationType.None);
             this.btnInicio.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnInicio.FocusedColor = System.Drawing.Color.Empty;
             this.btnInicio.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -307,6 +319,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.gunaTransition1.SetDecoration(this.label1, Guna.UI.Animation.DecorationType.None);
             this.label1.Font = new System.Drawing.Font("Eras Bold ITC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
             this.label1.Location = new System.Drawing.Point(45, 7);
@@ -318,6 +331,7 @@
             // btnOcultarMenu
             // 
             this.btnOcultarMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnOcultarMenu, Guna.UI.Animation.DecorationType.None);
             this.btnOcultarMenu.Image = global::Presentacion.Properties.Resources.icons8_menu_48;
             this.btnOcultarMenu.Location = new System.Drawing.Point(158, 8);
             this.btnOcultarMenu.Name = "btnOcultarMenu";
@@ -325,9 +339,11 @@
             this.btnOcultarMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnOcultarMenu.TabIndex = 0;
             this.btnOcultarMenu.TabStop = false;
+            this.btnOcultarMenu.Click += new System.EventHandler(this.btnOcultarMenu_Click);
             // 
             // pictureBox4
             // 
+            this.gunaTransition1.SetDecoration(this.pictureBox4, Guna.UI.Animation.DecorationType.None);
             this.pictureBox4.Image = global::Presentacion.Properties.Resources.LOGO2;
             this.pictureBox4.Location = new System.Drawing.Point(-8, -11);
             this.pictureBox4.Name = "pictureBox4";
@@ -345,6 +361,7 @@
             this.PnTop.Controls.Add(this.btnMinimizar);
             this.PnTop.Controls.Add(this.btnMaxMin);
             this.PnTop.Controls.Add(this.btnCerrar);
+            this.gunaTransition1.SetDecoration(this.PnTop, Guna.UI.Animation.DecorationType.None);
             this.PnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.PnTop.Location = new System.Drawing.Point(188, 0);
             this.PnTop.Name = "PnTop";
@@ -355,6 +372,7 @@
             // 
             this.lbUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbUser.AutoSize = true;
+            this.gunaTransition1.SetDecoration(this.lbUser, Guna.UI.Animation.DecorationType.None);
             this.lbUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(249)))), ((int)(((byte)(252)))));
             this.lbUser.Location = new System.Drawing.Point(753, 6);
@@ -366,6 +384,7 @@
             // btnHelp
             // 
             this.btnHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaTransition1.SetDecoration(this.btnHelp, Guna.UI.Animation.DecorationType.None);
             this.btnHelp.Image = global::Presentacion.Properties.Resources.icons8_help_48;
             this.btnHelp.Location = new System.Drawing.Point(695, 6);
             this.btnHelp.Name = "btnHelp";
@@ -377,6 +396,7 @@
             // imgUser
             // 
             this.imgUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaTransition1.SetDecoration(this.imgUser, Guna.UI.Animation.DecorationType.None);
             this.imgUser.Image = global::Presentacion.Properties.Resources.Sin_título_2;
             this.imgUser.Location = new System.Drawing.Point(716, 2);
             this.imgUser.Name = "imgUser";
@@ -393,6 +413,7 @@
             this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
             this.btnMinimizar.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MinimizeBox;
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnMinimizar, Guna.UI.Animation.DecorationType.None);
             this.btnMinimizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(185)))));
             this.btnMinimizar.IconSize = 15F;
             this.btnMinimizar.Location = new System.Drawing.Point(862, -1);
@@ -411,6 +432,7 @@
             this.btnMaxMin.BackColor = System.Drawing.Color.Transparent;
             this.btnMaxMin.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MaximizeBox;
             this.btnMaxMin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnMaxMin, Guna.UI.Animation.DecorationType.None);
             this.btnMaxMin.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(185)))));
             this.btnMaxMin.IconSize = 15F;
             this.btnMaxMin.Location = new System.Drawing.Point(894, 0);
@@ -428,6 +450,7 @@
             this.btnCerrar.AnimationSpeed = 0.03F;
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(56)))), ((int)(((byte)(89)))));
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnCerrar, Guna.UI.Animation.DecorationType.None);
             this.btnCerrar.IconColor = System.Drawing.Color.White;
             this.btnCerrar.IconSize = 15F;
             this.btnCerrar.Location = new System.Drawing.Point(926, 0);
@@ -441,6 +464,7 @@
             // PanelFormularios
             // 
             this.PanelFormularios.BackColor = System.Drawing.Color.White;
+            this.gunaTransition1.SetDecoration(this.PanelFormularios, Guna.UI.Animation.DecorationType.None);
             this.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelFormularios.Location = new System.Drawing.Point(188, 31);
             this.PanelFormularios.Name = "PanelFormularios";
@@ -457,6 +481,27 @@
             this.gunaAnimateWindow1.Interval = 800;
             this.gunaAnimateWindow1.TargetControl = this;
             // 
+            // gunaTransition1
+            // 
+            this.gunaTransition1.AnimationType = Guna.UI.Animation.AnimationType.HorizSlide;
+            this.gunaTransition1.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.gunaTransition1.DefaultAnimation = animation1;
+            // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -466,6 +511,7 @@
             this.Controls.Add(this.PanelFormularios);
             this.Controls.Add(this.PnTop);
             this.Controls.Add(this.PanelLateral);
+            this.gunaTransition1.SetDecoration(this, Guna.UI.Animation.DecorationType.None);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmHome";
@@ -509,5 +555,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
         private Guna.UI.WinForms.GunaAnimateWindow gunaAnimateWindow1;
+        private Guna.UI.WinForms.GunaTransition gunaTransition1;
     }
 }

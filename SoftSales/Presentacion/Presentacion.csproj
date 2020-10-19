@@ -132,15 +132,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_softsales.png" />
-    <None Include="Resources\sale.png" />
-    <None Include="Resources\icons8-back-28.png" />
-    <None Include="Resources\icons8-settings-32.png" />
-    <None Include="Resources\icons8-open-box-32.png" />
-    <None Include="Resources\icons8-checkout-32.png" />
-    <None Include="Resources\icons8-cash-register-32.png" />
-    <None Include="Resources\icons8-contacts-32 %281%29.png" />
-    <None Include="Resources\icons8-next.png" />
-    <None Include="Resources\icons8-categorize-32.png" />
     <None Include="Resources\icons8-arrow-pointing-left-28.png" />
     <None Include="Resources\LOGO.jpg" />
     <None Include="Resources\LOGO2.jpg" />
@@ -150,8 +141,6 @@
     <None Include="Resources\icons8-contacts-28.png" />
     <None Include="Resources\icons8-transaction-28.png" />
     <None Include="Resources\icons8-cash-register-28.png" />
-    <None Include="Resources\icons8-cash-register-321.png" />
-    <None Include="Resources\icons8-cash-register-48.png" />
     <None Include="Resources\icons8-settings-48.png" />
     <None Include="Resources\Sin título-2.png" />
     <None Include="Resources\icons8-help-48.png" />

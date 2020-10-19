@@ -199,7 +199,6 @@
             this.gunaAdvenceButton9.FocusedColor = System.Drawing.Color.Empty;
             this.gunaAdvenceButton9.Font = new System.Drawing.Font("Eras Medium ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaAdvenceButton9.ForeColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton9.Image = global::Presentacion.Properties.Resources.icons8_settings_32;
             this.gunaAdvenceButton9.ImageSize = new System.Drawing.Size(25, 25);
             this.gunaAdvenceButton9.LineColor = System.Drawing.Color.White;
             this.gunaAdvenceButton9.Location = new System.Drawing.Point(0, 484);
@@ -241,7 +240,6 @@
             this.gunaAdvenceButton8.FocusedColor = System.Drawing.Color.Empty;
             this.gunaAdvenceButton8.Font = new System.Drawing.Font("Eras Medium ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaAdvenceButton8.ForeColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton8.Image = global::Presentacion.Properties.Resources.icons8_categorize_32;
             this.gunaAdvenceButton8.ImageSize = new System.Drawing.Size(25, 25);
             this.gunaAdvenceButton8.LineColor = System.Drawing.Color.Gainsboro;
             this.gunaAdvenceButton8.Location = new System.Drawing.Point(0, 59);
@@ -274,7 +272,6 @@
             this.gunaAdvenceButton7.FocusedColor = System.Drawing.Color.Empty;
             this.gunaAdvenceButton7.Font = new System.Drawing.Font("Eras Medium ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaAdvenceButton7.ForeColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton7.Image = global::Presentacion.Properties.Resources.icons8_contacts_32__1_;
             this.gunaAdvenceButton7.ImageSize = new System.Drawing.Size(25, 25);
             this.gunaAdvenceButton7.LineColor = System.Drawing.Color.Gainsboro;
             this.gunaAdvenceButton7.Location = new System.Drawing.Point(0, 101);
@@ -306,7 +303,6 @@
             this.gunaAdvenceButton6.FocusedColor = System.Drawing.Color.Empty;
             this.gunaAdvenceButton6.Font = new System.Drawing.Font("Eras Medium ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaAdvenceButton6.ForeColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton6.Image = global::Presentacion.Properties.Resources.icons8_checkout_32;
             this.gunaAdvenceButton6.ImageSize = new System.Drawing.Size(25, 25);
             this.gunaAdvenceButton6.LineColor = System.Drawing.Color.Gainsboro;
             this.gunaAdvenceButton6.Location = new System.Drawing.Point(0, 143);
@@ -338,7 +334,6 @@
             this.gunaAdvenceButton5.FocusedColor = System.Drawing.Color.Empty;
             this.gunaAdvenceButton5.Font = new System.Drawing.Font("Eras Medium ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaAdvenceButton5.ForeColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton5.Image = global::Presentacion.Properties.Resources.icons8_cash_register_32;
             this.gunaAdvenceButton5.ImageSize = new System.Drawing.Size(25, 25);
             this.gunaAdvenceButton5.LineColor = System.Drawing.Color.Gainsboro;
             this.gunaAdvenceButton5.Location = new System.Drawing.Point(0, 185);
@@ -370,7 +365,6 @@
             this.gunaAdvenceButton1.FocusedColor = System.Drawing.Color.Empty;
             this.gunaAdvenceButton1.Font = new System.Drawing.Font("Eras Medium ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaAdvenceButton1.ForeColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton1.Image = global::Presentacion.Properties.Resources.icons8_open_box_32;
             this.gunaAdvenceButton1.ImageSize = new System.Drawing.Size(25, 25);
             this.gunaAdvenceButton1.LineColor = System.Drawing.Color.Gainsboro;
             this.gunaAdvenceButton1.Location = new System.Drawing.Point(0, 17);
@@ -429,7 +423,6 @@
             this.btnShow.FocusedColor = System.Drawing.Color.Empty;
             this.btnShow.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnShow.ForeColor = System.Drawing.Color.White;
-            this.btnShow.Image = global::Presentacion.Properties.Resources.icons8_next;
             this.btnShow.ImageSize = new System.Drawing.Size(28, 28);
             this.btnShow.Location = new System.Drawing.Point(21, 415);
             this.btnShow.Name = "btnShow";
@@ -459,7 +452,6 @@
             this.btnClose.FocusedColor = System.Drawing.Color.Empty;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Image = global::Presentacion.Properties.Resources.icons8_back_28;
             this.btnClose.ImageSize = new System.Drawing.Size(28, 28);
             this.btnClose.Location = new System.Drawing.Point(155, 415);
             this.btnClose.Name = "btnClose";

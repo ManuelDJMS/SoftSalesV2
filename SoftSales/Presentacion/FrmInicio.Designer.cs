@@ -166,7 +166,7 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::Presentacion.Properties.Resources.icons8_cheap_2_64;
+            this.pictureBox8.Image = global::Presentacion.Properties.Resources.icons8_cheap_2_48;
             this.pictureBox8.Location = new System.Drawing.Point(147, 21);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(50, 50);

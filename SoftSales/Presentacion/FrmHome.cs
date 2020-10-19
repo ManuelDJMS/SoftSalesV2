@@ -116,5 +116,13 @@ namespace Presentacion
         {
             AbrirFormulario<FrmInicio>();
         }
+
+        private void btnOcultarMenu_Click(object sender, EventArgs e)
+        {
+            //39-188
+            PanelLateral.Visible = false;
+            PanelLateral.Width = 39;
+            gunaTransition1.ShowSync(PanelLateral);
+        }
     }
 }
