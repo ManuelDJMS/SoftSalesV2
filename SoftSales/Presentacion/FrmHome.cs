@@ -84,7 +84,7 @@ namespace Presentacion
             gunaAnimateWindow1.AnimationType = Guna.UI.WinForms.GunaAnimateWindow.AnimateWindowType.AW_BLEND;
             gunaAnimateWindow1.Start();
             Guna.UI.Lib.GraphicsHelper.ShadowForm(this);
-            Guna.UI.Lib.GraphicsHelper.DrawLineShadow(PanelLateral, Color.FromArgb(23, 43, 77), 10, 10, Guna.UI.WinForms.VerHorAlign.VerticalRight);
+            Guna.UI.Lib.GraphicsHelper.DrawLineShadow(PanelLateral, Color.Blue, 10, 10, Guna.UI.WinForms.VerHorAlign.VerticalRight);
            
            
         }
@@ -93,7 +93,7 @@ namespace Presentacion
         {
             Form formulario;
             formulario = PanelFormularios.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
-                                                                                     //si el formulario/instancia no existe
+            //si el formulario/instancia no existe
             if (formulario == null)
             {
                 formulario = new MiForm();
@@ -121,8 +121,22 @@ namespace Presentacion
         {
             //39-188
             PanelLateral.Visible = false;
+            btnMostrarMenu.Visible = true;
             PanelLateral.Width = 39;
             gunaTransition1.ShowSync(PanelLateral);
+        }
+
+        private void bntMostrarMenu_Click(object sender, EventArgs e)
+        {
+            PanelLateral.Visible = false;
+            btnMostrarMenu.Visible = false;
+            PanelLateral.Width = 188;
+            gunaTransition1.ShowSync(PanelLateral);
+        }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmCategorias>();
         }
     }
 }

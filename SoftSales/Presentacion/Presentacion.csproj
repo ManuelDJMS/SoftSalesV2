@@ -150,6 +150,11 @@
     <None Include="Resources\icons8-cheap-2-48.png" />
     <None Include="Resources\icons8-cheap-2-64.png" />
     <None Include="Resources\icons8-audio-wave2-64.png" />
+    <None Include="Resources\icons8-chevron-right-48.png" />
+    <None Include="Resources\icons8-open-box-48 %282%29.png" />
+    <None Include="Resources\icons8-categorize-48 %281%29.png" />
+    <None Include="Resources\icons8-azure-48.png" />
+    <None Include="Resources\icons8-accounting-48 %281%29.png" />
     <Content Include="sale-sign.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

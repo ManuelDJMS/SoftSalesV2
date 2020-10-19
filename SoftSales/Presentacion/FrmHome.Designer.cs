@@ -33,6 +33,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHome));
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.PanelLateral = new Guna.UI.WinForms.GunaPanel();
+            this.btnMostrarMenu = new System.Windows.Forms.PictureBox();
             this.btnAjustes = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
             this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
@@ -56,6 +57,7 @@
             this.gunaAnimateWindow1 = new Guna.UI.WinForms.GunaAnimateWindow(this.components);
             this.gunaTransition1 = new Guna.UI.WinForms.GunaTransition(this.components);
             this.PanelLateral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMostrarMenu)).BeginInit();
             this.gunaPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnOcultarMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -71,6 +73,7 @@
             // PanelLateral
             // 
             this.PanelLateral.BackColor = System.Drawing.Color.White;
+            this.PanelLateral.Controls.Add(this.btnMostrarMenu);
             this.PanelLateral.Controls.Add(this.btnAjustes);
             this.PanelLateral.Controls.Add(this.gunaSeparator1);
             this.PanelLateral.Controls.Add(this.gunaPanel3);
@@ -83,6 +86,21 @@
             this.PanelLateral.Name = "PanelLateral";
             this.PanelLateral.Size = new System.Drawing.Size(188, 616);
             this.PanelLateral.TabIndex = 0;
+            // 
+            // btnMostrarMenu
+            // 
+            this.btnMostrarMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnMostrarMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaTransition1.SetDecoration(this.btnMostrarMenu, Guna.UI.Animation.DecorationType.None);
+            this.btnMostrarMenu.Image = global::Presentacion.Properties.Resources.icons8_chevron_right_48;
+            this.btnMostrarMenu.Location = new System.Drawing.Point(8, 526);
+            this.btnMostrarMenu.Name = "btnMostrarMenu";
+            this.btnMostrarMenu.Size = new System.Drawing.Size(24, 24);
+            this.btnMostrarMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMostrarMenu.TabIndex = 7;
+            this.btnMostrarMenu.TabStop = false;
+            this.btnMostrarMenu.Visible = false;
+            this.btnMostrarMenu.Click += new System.EventHandler(this.bntMostrarMenu_Click);
             // 
             // btnAjustes
             // 
@@ -280,6 +298,7 @@
             this.btnCategorias.Size = new System.Drawing.Size(182, 45);
             this.btnCategorias.TabIndex = 1;
             this.btnCategorias.Text = "Categorías";
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
             // 
             // btnInicio
             // 
@@ -519,6 +538,7 @@
             this.Load += new System.EventHandler(this.FrmHome_Load);
             this.PanelLateral.ResumeLayout(false);
             this.PanelLateral.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMostrarMenu)).EndInit();
             this.gunaPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnOcultarMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -556,5 +576,6 @@
         private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
         private Guna.UI.WinForms.GunaAnimateWindow gunaAnimateWindow1;
         private Guna.UI.WinForms.GunaTransition gunaTransition1;
+        private System.Windows.Forms.PictureBox btnMostrarMenu;
     }
 }
