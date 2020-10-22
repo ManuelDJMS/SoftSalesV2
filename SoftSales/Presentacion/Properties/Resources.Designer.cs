@@ -83,6 +83,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_add_property_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-add-property-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_arrow_pointing_left_28 {
             get {
                 object obj = ResourceManager.GetObject("icons8-arrow-pointing-left-28", resourceCulture);
@@ -126,6 +136,16 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap icons8_categorize_28 {
             get {
                 object obj = ResourceManager.GetObject("icons8-categorize-28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_categorize_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-categorize-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,6 +203,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_delete_bin_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-delete-bin-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_down_left_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-down-left-64", resourceCulture);
@@ -196,6 +226,16 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap icons8_down_left_64__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-down-left-64 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_edit_calendar_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-edit-calendar-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +286,26 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap icons8_open_box_48__2_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-open-box-48 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_save_all_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-save-all-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_search_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-search-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

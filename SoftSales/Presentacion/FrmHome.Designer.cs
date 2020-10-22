@@ -297,7 +297,7 @@
             this.btnCategorias.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(108)))), ((int)(((byte)(128)))));
             this.btnCategorias.Size = new System.Drawing.Size(182, 45);
             this.btnCategorias.TabIndex = 1;
-            this.btnCategorias.Text = "Categorías";
+            this.btnCategorias.Text = "Artículos";
             this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
             // 
             // btnInicio

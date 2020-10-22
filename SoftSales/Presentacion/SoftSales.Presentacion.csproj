@@ -68,6 +68,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmArticulos.Designer.cs">
+      <DependentUpon>FrmArticulos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmArticulos.resx">
+      <DependentUpon>FrmArticulos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCategorias.resx">
       <DependentUpon>FrmCategorias.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,7 +164,19 @@
     <None Include="Resources\icons8-categorize-48 %281%29.png" />
     <None Include="Resources\icons8-azure-48.png" />
     <None Include="Resources\icons8-accounting-48 %281%29.png" />
+    <None Include="Resources\icons8-categorize-48.png" />
+    <None Include="Resources\icons8-search-48.png" />
+    <None Include="Resources\icons8-add-property-48.png" />
+    <None Include="Resources\icons8-edit-calendar-48.png" />
+    <None Include="Resources\icons8-save-all-48.png" />
+    <None Include="Resources\icons8-delete-bin-48.png" />
     <Content Include="sale-sign.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SoftSales.Negocio\SoftSales.Negocio.csproj">
+      <Project>{F83389BA-D9D5-49D7-8684-7B3454CF2795}</Project>
+      <Name>SoftSales.Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

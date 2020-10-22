@@ -25,15 +25,15 @@ namespace Presentacion
         //private void chartcolum()
         //{
 
-           
+
         //    cartesianChart1.Series = new SeriesCollection
         //    {
         //        new LineSeries
         //        {
         //            Title = "2019",
-                   
+
         //            Values = new ChartValues<ObservablePoint> 
-                    
+
         //            { 
         //                new ObservablePoint(0,10),
         //                new ObservablePoint(4,7),
@@ -43,38 +43,38 @@ namespace Presentacion
         //        }
         //    };
 
-            //adding series will update and animate the chart automatically
-            //cartesianChart1.Series.Add(new ColumnSeries
-            //{
-            //    Title = "2020",
-            //    Values = new ChartValues<Point> {  11,
-            //56,
-            //42,
-            //40,
-            //60,
-            //10,
-            //35,
-            //70,
-            //40,
-            //60,
-            //10,
-            //35 }
-            //});
+        //adding series will update and animate the chart automatically
+        //cartesianChart1.Series.Add(new ColumnSeries
+        //{
+        //    Title = "2020",
+        //    Values = new ChartValues<Point> {  11,
+        //56,
+        //42,
+        //40,
+        //60,
+        //10,
+        //35,
+        //70,
+        //40,
+        //60,
+        //10,
+        //35 }
+        //});
 
-            ////also adding values updates and animates the chart automatically
-            //cartesianChart1.Series[1].Values.Add(48d);
+        ////also adding values updates and animates the chart automatically
+        //cartesianChart1.Series[1].Values.Add(48d);
 
-            //cartesianChart1.AxisX.Add(new Axis
-            //{
-            //    Title = "Sales Man",
-            //    Labels = new[] { "Maria", "Susan", "Charles", "Frida", "Jaenab", "Roma", "Ferdinand", "Asril", "Jaenab", "Roma", "Ferdinand", "Asril" }
-            //});
+        //cartesianChart1.AxisX.Add(new Axis
+        //{
+        //    Title = "Sales Man",
+        //    Labels = new[] { "Maria", "Susan", "Charles", "Frida", "Jaenab", "Roma", "Ferdinand", "Asril", "Jaenab", "Roma", "Ferdinand", "Asril" }
+        //});
 
-            //cartesianChart1.AxisY.Add(new Axis
-            //{
-            //    Title = "Sold Apps",
-            //    LabelFormatter = value => value.ToString("N")
-            //});
+        //cartesianChart1.AxisY.Add(new Axis
+        //{
+        //Title = "Sold Apps",
+        //    LabelFormatter = value => value.ToString("N")
+        //});
 
 
         //}
@@ -85,8 +85,6 @@ namespace Presentacion
             gunaAnimateWindow1.Start();
             Guna.UI.Lib.GraphicsHelper.ShadowForm(this);
             Guna.UI.Lib.GraphicsHelper.DrawLineShadow(PanelLateral, Color.Blue, 10, 10, Guna.UI.WinForms.VerHorAlign.VerticalRight);
-           
-           
         }
 
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
@@ -136,7 +134,7 @@ namespace Presentacion
 
         private void btnCategorias_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmCategorias>();
+            AbrirFormulario<FrmArticulos>();
         }
     }
 }
