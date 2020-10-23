@@ -49,6 +49,10 @@
       <Project>{479CFB4F-A918-4466-9626-BB49D8388BDD}</Project>
       <Name>SoftSales.Datos</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SoftSales.Entidades\SoftSales.Entidades.csproj">
+      <Project>{41677672-193F-4A0D-8EBA-C307954F776C}</Project>
+      <Name>SoftSales.Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

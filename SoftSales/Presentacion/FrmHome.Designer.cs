@@ -534,6 +534,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmHome";
             this.Load += new System.EventHandler(this.FrmHome_Load);
             this.PanelLateral.ResumeLayout(false);

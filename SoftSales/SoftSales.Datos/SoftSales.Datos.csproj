@@ -45,5 +45,11 @@
     <Compile Include="DCategorias.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SoftSales.Entidades\SoftSales.Entidades.csproj">
+      <Project>{41677672-193F-4A0D-8EBA-C307954F776C}</Project>
+      <Name>SoftSales.Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

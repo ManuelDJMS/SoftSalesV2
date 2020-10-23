@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
             this.gunaElipsePanel3 = new Guna.UI.WinForms.GunaElipsePanel();
@@ -45,7 +45,7 @@
             this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.gunaElipsePanel5 = new Guna.UI.WinForms.GunaElipsePanel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.btnCategorias = new System.Windows.Forms.PictureBox();
             this.gunaSeparator5 = new Guna.UI.WinForms.GunaSeparator();
             this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
@@ -57,20 +57,20 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.gunaCheckBox1 = new Guna.UI.WinForms.GunaCheckBox();
             this.gunaAdvenceButton2 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.DgEmpresas = new Guna.UI.WinForms.GunaDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gunaCheckBox1 = new Guna.UI.WinForms.GunaCheckBox();
             this.gunaPanel2.SuspendLayout();
             this.gunaElipsePanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.gunaElipsePanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.gunaElipsePanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCategorias)).BeginInit();
             this.gunaElipsePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -208,7 +208,7 @@
             // 
             this.gunaElipsePanel5.BackColor = System.Drawing.Color.Transparent;
             this.gunaElipsePanel5.BaseColor = System.Drawing.Color.White;
-            this.gunaElipsePanel5.Controls.Add(this.pictureBox6);
+            this.gunaElipsePanel5.Controls.Add(this.btnCategorias);
             this.gunaElipsePanel5.Controls.Add(this.gunaSeparator5);
             this.gunaElipsePanel5.Controls.Add(this.gunaLabel9);
             this.gunaElipsePanel5.Controls.Add(this.gunaLabel10);
@@ -217,16 +217,17 @@
             this.gunaElipsePanel5.Size = new System.Drawing.Size(200, 44);
             this.gunaElipsePanel5.TabIndex = 5;
             // 
-            // pictureBox6
+            // btnCategorias
             // 
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox6.Image = global::Presentacion.Properties.Resources.icons8_categorize_48__1_;
-            this.pictureBox6.Location = new System.Drawing.Point(13, 7);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 4;
-            this.pictureBox6.TabStop = false;
+            this.btnCategorias.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCategorias.Image = global::Presentacion.Properties.Resources.icons8_categorize_48__1_;
+            this.btnCategorias.Location = new System.Drawing.Point(13, 7);
+            this.btnCategorias.Name = "btnCategorias";
+            this.btnCategorias.Size = new System.Drawing.Size(32, 32);
+            this.btnCategorias.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnCategorias.TabIndex = 4;
+            this.btnCategorias.TabStop = false;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
             // 
             // gunaSeparator5
             // 
@@ -348,6 +349,18 @@
             this.gunaShadowPanel1.TabIndex = 8;
             this.gunaShadowPanel1.UseTransfarantBackground = true;
             // 
+            // gunaCheckBox1
+            // 
+            this.gunaCheckBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaCheckBox1.CheckedOffColor = System.Drawing.Color.Gray;
+            this.gunaCheckBox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaCheckBox1.FillColor = System.Drawing.Color.White;
+            this.gunaCheckBox1.Location = new System.Drawing.Point(18, 403);
+            this.gunaCheckBox1.Name = "gunaCheckBox1";
+            this.gunaCheckBox1.Size = new System.Drawing.Size(89, 20);
+            this.gunaCheckBox1.TabIndex = 288;
+            this.gunaCheckBox1.Text = "Seleccionar";
+            // 
             // gunaAdvenceButton2
             // 
             this.gunaAdvenceButton2.AnimationHoverSpeed = 0.07F;
@@ -384,8 +397,8 @@
             // 
             // DgEmpresas
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.DgEmpresas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.DgEmpresas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DgEmpresas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DgEmpresas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -393,28 +406,28 @@
             this.DgEmpresas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgEmpresas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DgEmpresas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgEmpresas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgEmpresas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DgEmpresas.ColumnHeadersHeight = 21;
             this.DgEmpresas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column5});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgEmpresas.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgEmpresas.DefaultCellStyle = dataGridViewCellStyle3;
             this.DgEmpresas.EnableHeadersVisualStyles = false;
             this.DgEmpresas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DgEmpresas.Location = new System.Drawing.Point(18, 31);
@@ -482,19 +495,7 @@
             this.Column5.ReadOnly = true;
             this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // gunaCheckBox1
-            // 
-            this.gunaCheckBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaCheckBox1.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gunaCheckBox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaCheckBox1.FillColor = System.Drawing.Color.White;
-            this.gunaCheckBox1.Location = new System.Drawing.Point(18, 403);
-            this.gunaCheckBox1.Name = "gunaCheckBox1";
-            this.gunaCheckBox1.Size = new System.Drawing.Size(89, 20);
-            this.gunaCheckBox1.TabIndex = 288;
-            this.gunaCheckBox1.Text = "Seleccionar";
-            // 
-            // FrmCategorias
+            // FrmArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -503,7 +504,7 @@
             this.Controls.Add(this.gunaShadowPanel1);
             this.Controls.Add(this.gunaPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmCategorias";
+            this.Name = "FrmArticulos";
             this.Text = "FrmCategorias";
             this.gunaPanel2.ResumeLayout(false);
             this.gunaPanel2.PerformLayout();
@@ -515,7 +516,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.gunaElipsePanel5.ResumeLayout(false);
             this.gunaElipsePanel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCategorias)).EndInit();
             this.gunaElipsePanel1.ResumeLayout(false);
             this.gunaElipsePanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -550,7 +551,7 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel7;
         private Guna.UI.WinForms.GunaLabel gunaLabel8;
         private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel5;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox btnCategorias;
         private Guna.UI.WinForms.GunaSeparator gunaSeparator5;
         private Guna.UI.WinForms.GunaLabel gunaLabel9;
         private Guna.UI.WinForms.GunaLabel gunaLabel10;

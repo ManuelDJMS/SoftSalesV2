@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SoftSales.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -34,6 +35,88 @@ namespace SoftSales.Datos
             {
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
+        }
+
+        public DataTable Buscar (string valor)
+        {
+            SqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            SqlConnection conexion = new SqlConnection();
+            try
+            {
+                conexion = Conexion.getInstancia().CrearConexion();
+                SqlCommand comando = new SqlCommand("Categorias_Buscar", conexion);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.Add("@valor", SqlDbType.VarChar).Value = valor;
+                conexion.Open();
+                Resultado = comando.ExecuteReader();
+                Tabla.Load(Resultado);
+                return Tabla;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (conexion.State == ConnectionState.Open) conexion.Close();
+            }
+
+        }
+
+        public string Existe(string valor)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection();
+            try
+            {
+                conexion = Conexion.getInstancia().CrearConexion();
+                SqlCommand comando =new SqlCommand("Categorias_Existe", conexion);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.Add("@valor", SqlDbType.VarChar).Value = valor;
+                SqlParameter existe = new SqlParameter();
+                existe.ParameterName = "@existe";
+                existe.SqlDbType = SqlDbType.Int;
+                existe.Direction = ParameterDirection.Output;
+                comando.Parameters.Add(existe);
+                conexion.Open();
+                comando.ExecuteNonQuery();
+                respuesta = Convert.ToString(existe.Value);
+            }
+            catch (Exception ex)
+            {
+                respuesta = ex.Message;
+            }
+            finally
+            {
+                if (conexion.State == ConnectionState.Open) conexion.Close();
+            }
+            return respuesta;
+        }
+
+        public string Insertar(Categorias Obj)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection();
+            try
+            {
+                conexion = Conexion.getInstancia().CrearConexion();
+                SqlCommand comando = new SqlCommand("Categorias_Insertar", conexion);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value = Obj.Nombre;
+                comando.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = Obj.Descripcion;
+                conexion.Open();
+                respuesta = comando.ExecuteNonQuery() == 1 ? "OK" : "No se pudo ingresar la categoría";
+            }
+            catch(Exception ex)
+            {
+                respuesta = ex.Message;
+            }
+            finally
+            {
+                if (conexion.State == ConnectionState.Open) conexion.Close();
+            }
+            return respuesta;
         }
     }
 }

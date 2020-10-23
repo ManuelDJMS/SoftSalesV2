@@ -16,5 +16,11 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            FrmCategorias frm = new FrmCategorias();
+            frm.Show();
+        }
     }
 }

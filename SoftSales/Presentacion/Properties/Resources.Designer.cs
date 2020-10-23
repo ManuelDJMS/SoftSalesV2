@@ -123,6 +123,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_cancel_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cancel-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_cash_register_28 {
             get {
                 object obj = ResourceManager.GetObject("icons8-cash-register-28", resourceCulture);
@@ -276,6 +286,16 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap icons8_menu_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-menu-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_ok_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-ok-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

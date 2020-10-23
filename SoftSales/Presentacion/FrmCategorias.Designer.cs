@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCategorias));
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.PanelSuperior = new Guna.UI.WinForms.GunaPanel();
-            this.btnCerrar = new Guna.UI.WinForms.GunaControlBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.btnCerrar = new Guna.UI.WinForms.GunaControlBox();
             this.txtBuscar = new Guna.UI.WinForms.GunaTextBox();
             this.DgCategorias = new Guna.UI.WinForms.GunaDataGridView();
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
@@ -47,18 +47,16 @@
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.txtDescripcion = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
-            this.txtEliminar = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.txtGuardar = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.txtEditar = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.txtNuevo = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.Error = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnEliminar = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnGuardar = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
-            this.Error = new System.Windows.Forms.ErrorProvider(this.components);
             this.PanelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgCategorias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Error)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Error)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaElipse1
@@ -67,7 +65,7 @@
             // 
             // PanelSuperior
             // 
-            this.PanelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
+            this.PanelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
             this.PanelSuperior.Controls.Add(this.gunaLabel1);
             this.PanelSuperior.Controls.Add(this.gunaPictureBox1);
             this.PanelSuperior.Controls.Add(this.btnCerrar);
@@ -76,6 +74,17 @@
             this.PanelSuperior.Name = "PanelSuperior";
             this.PanelSuperior.Size = new System.Drawing.Size(740, 31);
             this.PanelSuperior.TabIndex = 0;
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel1.Location = new System.Drawing.Point(29, 5);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(84, 21);
+            this.gunaLabel1.TabIndex = 3;
+            this.gunaLabel1.Text = "Categorías";
             // 
             // btnCerrar
             // 
@@ -93,17 +102,6 @@
             this.btnCerrar.OnPressedColor = System.Drawing.Color.Black;
             this.btnCerrar.Size = new System.Drawing.Size(32, 32);
             this.btnCerrar.TabIndex = 2;
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(29, 5);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(84, 21);
-            this.gunaLabel1.TabIndex = 3;
-            this.gunaLabel1.Text = "Categorías";
             // 
             // txtBuscar
             // 
@@ -128,8 +126,8 @@
             this.DgCategorias.AllowUserToAddRows = false;
             this.DgCategorias.AllowUserToDeleteRows = false;
             this.DgCategorias.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.DgCategorias.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.DgCategorias.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DgCategorias.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DgCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -137,23 +135,23 @@
             this.DgCategorias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgCategorias.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DgCategorias.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DgCategorias.ColumnHeadersHeight = 21;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgCategorias.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgCategorias.DefaultCellStyle = dataGridViewCellStyle3;
             this.DgCategorias.EnableHeadersVisualStyles = false;
             this.DgCategorias.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DgCategorias.Location = new System.Drawing.Point(12, 77);
@@ -283,137 +281,77 @@
             this.gunaLabel4.TabIndex = 290;
             this.gunaLabel4.Text = "Descripción:";
             // 
-            // txtEliminar
+            // Error
             // 
-            this.txtEliminar.AnimationHoverSpeed = 0.07F;
-            this.txtEliminar.AnimationSpeed = 0.03F;
-            this.txtEliminar.BackColor = System.Drawing.Color.Transparent;
-            this.txtEliminar.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.txtEliminar.BorderColor = System.Drawing.Color.Black;
-            this.txtEliminar.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.txtEliminar.CheckedBorderColor = System.Drawing.Color.Black;
-            this.txtEliminar.CheckedForeColor = System.Drawing.Color.White;
-            this.txtEliminar.CheckedImage = ((System.Drawing.Image)(resources.GetObject("txtEliminar.CheckedImage")));
-            this.txtEliminar.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.txtEliminar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.txtEliminar.FocusedColor = System.Drawing.Color.Empty;
-            this.txtEliminar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtEliminar.ForeColor = System.Drawing.Color.White;
-            this.txtEliminar.Image = global::Presentacion.Properties.Resources.icons8_delete_bin_48;
-            this.txtEliminar.ImageSize = new System.Drawing.Size(20, 20);
-            this.txtEliminar.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.txtEliminar.Location = new System.Drawing.Point(607, 302);
-            this.txtEliminar.Name = "txtEliminar";
-            this.txtEliminar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.txtEliminar.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.txtEliminar.OnHoverForeColor = System.Drawing.Color.White;
-            this.txtEliminar.OnHoverImage = null;
-            this.txtEliminar.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.txtEliminar.OnPressedColor = System.Drawing.Color.Black;
-            this.txtEliminar.Radius = 6;
-            this.txtEliminar.Size = new System.Drawing.Size(111, 32);
-            this.txtEliminar.TabIndex = 295;
-            this.txtEliminar.Text = "Eliminar";
-            this.txtEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Error.ContainerControl = this;
+            this.Error.Icon = ((System.Drawing.Icon)(resources.GetObject("Error.Icon")));
             // 
-            // txtGuardar
+            // btnEliminar
             // 
-            this.txtGuardar.AnimationHoverSpeed = 0.07F;
-            this.txtGuardar.AnimationSpeed = 0.03F;
-            this.txtGuardar.BackColor = System.Drawing.Color.Transparent;
-            this.txtGuardar.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.txtGuardar.BorderColor = System.Drawing.Color.Black;
-            this.txtGuardar.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.txtGuardar.CheckedBorderColor = System.Drawing.Color.Black;
-            this.txtGuardar.CheckedForeColor = System.Drawing.Color.White;
-            this.txtGuardar.CheckedImage = ((System.Drawing.Image)(resources.GetObject("txtGuardar.CheckedImage")));
-            this.txtGuardar.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.txtGuardar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.txtGuardar.FocusedColor = System.Drawing.Color.Empty;
-            this.txtGuardar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtGuardar.ForeColor = System.Drawing.Color.White;
-            this.txtGuardar.Image = global::Presentacion.Properties.Resources.icons8_save_all_48;
-            this.txtGuardar.ImageSize = new System.Drawing.Size(20, 20);
-            this.txtGuardar.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.txtGuardar.Location = new System.Drawing.Point(490, 302);
-            this.txtGuardar.Name = "txtGuardar";
-            this.txtGuardar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.txtGuardar.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.txtGuardar.OnHoverForeColor = System.Drawing.Color.White;
-            this.txtGuardar.OnHoverImage = null;
-            this.txtGuardar.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.txtGuardar.OnPressedColor = System.Drawing.Color.Black;
-            this.txtGuardar.Radius = 6;
-            this.txtGuardar.Size = new System.Drawing.Size(111, 32);
-            this.txtGuardar.TabIndex = 294;
-            this.txtGuardar.Text = "Guardar";
-            this.txtGuardar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnEliminar.AnimationHoverSpeed = 0.07F;
+            this.btnEliminar.AnimationSpeed = 0.03F;
+            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
+            this.btnEliminar.BorderColor = System.Drawing.Color.Black;
+            this.btnEliminar.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnEliminar.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnEliminar.CheckedForeColor = System.Drawing.Color.White;
+            this.btnEliminar.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.CheckedImage")));
+            this.btnEliminar.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnEliminar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnEliminar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Image = global::Presentacion.Properties.Resources.icons8_delete_bin_48;
+            this.btnEliminar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnEliminar.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnEliminar.Location = new System.Drawing.Point(608, 271);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnEliminar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnEliminar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnEliminar.OnHoverImage = null;
+            this.btnEliminar.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnEliminar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnEliminar.Radius = 6;
+            this.btnEliminar.Size = new System.Drawing.Size(111, 32);
+            this.btnEliminar.TabIndex = 295;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtEditar
+            // btnGuardar
             // 
-            this.txtEditar.AnimationHoverSpeed = 0.07F;
-            this.txtEditar.AnimationSpeed = 0.03F;
-            this.txtEditar.BackColor = System.Drawing.Color.Transparent;
-            this.txtEditar.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.txtEditar.BorderColor = System.Drawing.Color.Black;
-            this.txtEditar.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.txtEditar.CheckedBorderColor = System.Drawing.Color.Black;
-            this.txtEditar.CheckedForeColor = System.Drawing.Color.White;
-            this.txtEditar.CheckedImage = ((System.Drawing.Image)(resources.GetObject("txtEditar.CheckedImage")));
-            this.txtEditar.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.txtEditar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.txtEditar.FocusedColor = System.Drawing.Color.Empty;
-            this.txtEditar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtEditar.ForeColor = System.Drawing.Color.White;
-            this.txtEditar.Image = global::Presentacion.Properties.Resources.icons8_edit_calendar_48;
-            this.txtEditar.ImageSize = new System.Drawing.Size(20, 20);
-            this.txtEditar.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.txtEditar.Location = new System.Drawing.Point(607, 264);
-            this.txtEditar.Name = "txtEditar";
-            this.txtEditar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.txtEditar.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.txtEditar.OnHoverForeColor = System.Drawing.Color.White;
-            this.txtEditar.OnHoverImage = null;
-            this.txtEditar.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.txtEditar.OnPressedColor = System.Drawing.Color.Black;
-            this.txtEditar.Radius = 6;
-            this.txtEditar.Size = new System.Drawing.Size(111, 32);
-            this.txtEditar.TabIndex = 293;
-            this.txtEditar.Text = "Editar";
-            this.txtEditar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtNuevo
-            // 
-            this.txtNuevo.AnimationHoverSpeed = 0.07F;
-            this.txtNuevo.AnimationSpeed = 0.03F;
-            this.txtNuevo.BackColor = System.Drawing.Color.Transparent;
-            this.txtNuevo.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.txtNuevo.BorderColor = System.Drawing.Color.Black;
-            this.txtNuevo.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.txtNuevo.CheckedBorderColor = System.Drawing.Color.Black;
-            this.txtNuevo.CheckedForeColor = System.Drawing.Color.White;
-            this.txtNuevo.CheckedImage = ((System.Drawing.Image)(resources.GetObject("txtNuevo.CheckedImage")));
-            this.txtNuevo.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.txtNuevo.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.txtNuevo.FocusedColor = System.Drawing.Color.Empty;
-            this.txtNuevo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNuevo.ForeColor = System.Drawing.Color.White;
-            this.txtNuevo.Image = global::Presentacion.Properties.Resources.icons8_add_property_48;
-            this.txtNuevo.ImageSize = new System.Drawing.Size(20, 20);
-            this.txtNuevo.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.txtNuevo.Location = new System.Drawing.Point(490, 264);
-            this.txtNuevo.Name = "txtNuevo";
-            this.txtNuevo.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.txtNuevo.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.txtNuevo.OnHoverForeColor = System.Drawing.Color.White;
-            this.txtNuevo.OnHoverImage = null;
-            this.txtNuevo.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.txtNuevo.OnPressedColor = System.Drawing.Color.Black;
-            this.txtNuevo.Radius = 6;
-            this.txtNuevo.Size = new System.Drawing.Size(111, 32);
-            this.txtNuevo.TabIndex = 292;
-            this.txtNuevo.Text = "Nuevo";
-            this.txtNuevo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnGuardar.AnimationHoverSpeed = 0.07F;
+            this.btnGuardar.AnimationSpeed = 0.03F;
+            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
+            this.btnGuardar.BorderColor = System.Drawing.Color.Black;
+            this.btnGuardar.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnGuardar.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnGuardar.CheckedForeColor = System.Drawing.Color.White;
+            this.btnGuardar.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnGuardar.CheckedImage")));
+            this.btnGuardar.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnGuardar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnGuardar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Image = global::Presentacion.Properties.Resources.icons8_save_all_48;
+            this.btnGuardar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnGuardar.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnGuardar.Location = new System.Drawing.Point(491, 271);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnGuardar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnGuardar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnGuardar.OnHoverImage = null;
+            this.btnGuardar.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnGuardar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnGuardar.Radius = 6;
+            this.btnGuardar.Size = new System.Drawing.Size(111, 32);
+            this.btnGuardar.TabIndex = 294;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // gunaPictureBox2
             // 
@@ -437,21 +375,14 @@
             this.gunaPictureBox1.TabIndex = 1;
             this.gunaPictureBox1.TabStop = false;
             // 
-            // Error
-            // 
-            this.Error.ContainerControl = this;
-            this.Error.Icon = ((System.Drawing.Icon)(resources.GetObject("Error.Icon")));
-            // 
             // FrmCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(740, 355);
-            this.Controls.Add(this.txtEliminar);
-            this.Controls.Add(this.txtGuardar);
-            this.Controls.Add(this.txtEditar);
-            this.Controls.Add(this.txtNuevo);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.gunaLabel4);
             this.Controls.Add(this.txtNombre);
@@ -465,14 +396,15 @@
             this.Controls.Add(this.txtBuscar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCategorias";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCategorias";
             this.Load += new System.EventHandler(this.FrmCategorias_Load);
             this.PanelSuperior.ResumeLayout(false);
             this.PanelSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgCategorias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Error)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Error)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -489,7 +421,6 @@
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox2;
         internal Guna.UI.WinForms.GunaDataGridView DgCategorias;
         private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
-        private Guna.UI.WinForms.GunaAdvenceButton txtNuevo;
         private Guna.UI.WinForms.GunaTextBox txtDescripcion;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaTextBox txtNombre;
@@ -497,9 +428,8 @@
         private Guna.UI.WinForms.GunaTextBox txtidCategoria;
         private Guna.UI.WinForms.GunaVSeparator gunaVSeparator1;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
-        private Guna.UI.WinForms.GunaAdvenceButton txtEliminar;
-        private Guna.UI.WinForms.GunaAdvenceButton txtGuardar;
-        private Guna.UI.WinForms.GunaAdvenceButton txtEditar;
+        private Guna.UI.WinForms.GunaAdvenceButton btnEliminar;
+        private Guna.UI.WinForms.GunaAdvenceButton btnGuardar;
         private System.Windows.Forms.ErrorProvider Error;
     }
 }
