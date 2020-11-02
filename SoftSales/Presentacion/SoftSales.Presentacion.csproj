@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>sale-sign.ico</ApplicationIcon>
+    <ApplicationIcon>LOGO2.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI">
@@ -98,11 +98,23 @@
     <Compile Include="FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Notificaciones\FrmAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notificaciones\FrmAlert.Designer.cs">
+      <DependentUpon>FrmAlert.cs</DependentUpon>
+    </Compile>
     <Compile Include="Notificaciones\FrmError.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Notificaciones\FrmError.Designer.cs">
       <DependentUpon>FrmError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notificaciones\FrmQuestionSuccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notificaciones\FrmQuestionSuccess.Designer.cs">
+      <DependentUpon>FrmQuestionSuccess.cs</DependentUpon>
     </Compile>
     <Compile Include="Notificaciones\FrmSuccess.cs">
       <SubType>Form</SubType>
@@ -127,8 +139,14 @@
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Notificaciones\FrmAlert.resx">
+      <DependentUpon>FrmAlert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Notificaciones\FrmError.resx">
       <DependentUpon>FrmError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notificaciones\FrmQuestionSuccess.resx">
+      <DependentUpon>FrmQuestionSuccess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Notificaciones\FrmSuccess.resx">
       <DependentUpon>FrmSuccess.cs</DependentUpon>
@@ -190,7 +208,13 @@
     <None Include="Resources\icons8-delete-bin-48.png" />
     <None Include="Resources\icons8-ok-64.png" />
     <None Include="Resources\icons8-cancel-64.png" />
-    <Content Include="sale-sign.ico" />
+    <None Include="Resources\icons8-checkmark-48.png" />
+    <None Include="Resources\icons8-xbox-x-48.png" />
+    <None Include="Resources\icons8-ask-question-64.png" />
+    <None Include="Resources\icons8-x-50.png" />
+    <None Include="Resources\Multiply_18px.png" />
+    <None Include="Resources\icons8-box-important-52.png" />
+    <Content Include="LOGO2.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SoftSales.Negocio\SoftSales.Negocio.csproj">

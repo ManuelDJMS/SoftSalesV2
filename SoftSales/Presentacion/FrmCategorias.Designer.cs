@@ -48,7 +48,10 @@
             this.txtDescripcion = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.Error = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ckSeleccionar = new Guna.UI.WinForms.GunaCheckBox();
+            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnEliminar = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnNuevo = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnGuardar = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
@@ -111,7 +114,7 @@
             this.txtBuscar.BorderSize = 1;
             this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBuscar.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtBuscar.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtBuscar.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
             this.txtBuscar.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBuscar.Location = new System.Drawing.Point(41, 41);
@@ -120,6 +123,7 @@
             this.txtBuscar.Radius = 6;
             this.txtBuscar.Size = new System.Drawing.Size(222, 30);
             this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // DgCategorias
             // 
@@ -130,7 +134,7 @@
             this.DgCategorias.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DgCategorias.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DgCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DgCategorias.BackgroundColor = System.Drawing.Color.White;
             this.DgCategorias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgCategorias.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -144,11 +148,13 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DgCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DgCategorias.ColumnHeadersHeight = 21;
+            this.DgCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Eliminar});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(215)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgCategorias.DefaultCellStyle = dataGridViewCellStyle3;
@@ -159,7 +165,7 @@
             this.DgCategorias.ReadOnly = true;
             this.DgCategorias.RowHeadersVisible = false;
             this.DgCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgCategorias.Size = new System.Drawing.Size(457, 257);
+            this.DgCategorias.Size = new System.Drawing.Size(454, 266);
             this.DgCategorias.TabIndex = 284;
             this.DgCategorias.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.DgCategorias.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -181,8 +187,9 @@
             this.DgCategorias.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.DgCategorias.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.DgCategorias.ThemeStyle.RowsStyle.Height = 22;
-            this.DgCategorias.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DgCategorias.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(215)))), ((int)(((byte)(240)))));
             this.DgCategorias.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DgCategorias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgCategorias_CellContentClick);
             // 
             // gunaDragControl1
             // 
@@ -204,18 +211,19 @@
             this.gunaVSeparator1.LineColor = System.Drawing.Color.Silver;
             this.gunaVSeparator1.Location = new System.Drawing.Point(465, 41);
             this.gunaVSeparator1.Name = "gunaVSeparator1";
-            this.gunaVSeparator1.Size = new System.Drawing.Size(12, 303);
+            this.gunaVSeparator1.Size = new System.Drawing.Size(12, 339);
             this.gunaVSeparator1.TabIndex = 286;
             // 
             // txtidCategoria
             // 
             this.txtidCategoria.BackColor = System.Drawing.Color.Transparent;
-            this.txtidCategoria.BaseColor = System.Drawing.Color.White;
+            this.txtidCategoria.BaseColor = System.Drawing.Color.WhiteSmoke;
             this.txtidCategoria.BorderColor = System.Drawing.Color.Silver;
             this.txtidCategoria.BorderSize = 1;
             this.txtidCategoria.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtidCategoria.Enabled = false;
             this.txtidCategoria.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtidCategoria.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtidCategoria.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
             this.txtidCategoria.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtidCategoria.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtidCategoria.Location = new System.Drawing.Point(486, 59);
@@ -232,8 +240,9 @@
             this.txtNombre.BorderColor = System.Drawing.Color.Silver;
             this.txtNombre.BorderSize = 1;
             this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombre.Enabled = false;
             this.txtNombre.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtNombre.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtNombre.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
             this.txtNombre.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNombre.Location = new System.Drawing.Point(486, 110);
@@ -260,11 +269,13 @@
             this.txtDescripcion.BorderColor = System.Drawing.Color.Silver;
             this.txtDescripcion.BorderSize = 1;
             this.txtDescripcion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDescripcion.Enabled = false;
             this.txtDescripcion.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtDescripcion.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtDescripcion.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
             this.txtDescripcion.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtDescripcion.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDescripcion.Location = new System.Drawing.Point(486, 161);
+            this.txtDescripcion.MultiLine = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.PasswordChar = '\0';
             this.txtDescripcion.Radius = 6;
@@ -286,6 +297,27 @@
             this.Error.ContainerControl = this;
             this.Error.Icon = ((System.Drawing.Icon)(resources.GetObject("Error.Icon")));
             // 
+            // ckSeleccionar
+            // 
+            this.ckSeleccionar.BaseColor = System.Drawing.Color.White;
+            this.ckSeleccionar.CheckedOffColor = System.Drawing.Color.Gray;
+            this.ckSeleccionar.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
+            this.ckSeleccionar.FillColor = System.Drawing.Color.White;
+            this.ckSeleccionar.Location = new System.Drawing.Point(253, 360);
+            this.ckSeleccionar.Name = "ckSeleccionar";
+            this.ckSeleccionar.Size = new System.Drawing.Size(89, 20);
+            this.ckSeleccionar.TabIndex = 296;
+            this.ckSeleccionar.Text = "Seleccionar";
+            this.ckSeleccionar.CheckedChanged += new System.EventHandler(this.ckSeleccionar_CheckedChanged);
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Visible = false;
+            this.Eliminar.Width = 61;
+            // 
             // btnEliminar
             // 
             this.btnEliminar.AnimationHoverSpeed = 0.07F;
@@ -298,6 +330,7 @@
             this.btnEliminar.CheckedForeColor = System.Drawing.Color.White;
             this.btnEliminar.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.CheckedImage")));
             this.btnEliminar.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnEliminar.FocusedColor = System.Drawing.Color.Empty;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -305,9 +338,9 @@
             this.btnEliminar.Image = global::Presentacion.Properties.Resources.icons8_delete_bin_48;
             this.btnEliminar.ImageSize = new System.Drawing.Size(20, 20);
             this.btnEliminar.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnEliminar.Location = new System.Drawing.Point(608, 271);
+            this.btnEliminar.Location = new System.Drawing.Point(348, 349);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnEliminar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(77)))), ((int)(((byte)(144)))));
             this.btnEliminar.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnEliminar.OnHoverForeColor = System.Drawing.Color.White;
             this.btnEliminar.OnHoverImage = null;
@@ -315,9 +348,45 @@
             this.btnEliminar.OnPressedColor = System.Drawing.Color.Black;
             this.btnEliminar.Radius = 6;
             this.btnEliminar.Size = new System.Drawing.Size(111, 32);
-            this.btnEliminar.TabIndex = 295;
+            this.btnEliminar.TabIndex = 297;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.AnimationHoverSpeed = 0.07F;
+            this.btnNuevo.AnimationSpeed = 0.03F;
+            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevo.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
+            this.btnNuevo.BorderColor = System.Drawing.Color.Black;
+            this.btnNuevo.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnNuevo.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnNuevo.CheckedForeColor = System.Drawing.Color.White;
+            this.btnNuevo.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.CheckedImage")));
+            this.btnNuevo.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevo.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnNuevo.FocusedColor = System.Drawing.Color.Empty;
+            this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevo.Image = global::Presentacion.Properties.Resources.icons8_add_property_48;
+            this.btnNuevo.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnNuevo.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnNuevo.Location = new System.Drawing.Point(608, 271);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(77)))), ((int)(((byte)(144)))));
+            this.btnNuevo.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnNuevo.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnNuevo.OnHoverImage = null;
+            this.btnNuevo.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnNuevo.OnPressedColor = System.Drawing.Color.Black;
+            this.btnNuevo.Radius = 6;
+            this.btnNuevo.Size = new System.Drawing.Size(111, 32);
+            this.btnNuevo.TabIndex = 295;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnGuardar
             // 
@@ -331,6 +400,7 @@
             this.btnGuardar.CheckedForeColor = System.Drawing.Color.White;
             this.btnGuardar.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnGuardar.CheckedImage")));
             this.btnGuardar.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnGuardar.FocusedColor = System.Drawing.Color.Empty;
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -340,7 +410,7 @@
             this.btnGuardar.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.btnGuardar.Location = new System.Drawing.Point(491, 271);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnGuardar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(77)))), ((int)(((byte)(144)))));
             this.btnGuardar.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnGuardar.OnHoverForeColor = System.Drawing.Color.White;
             this.btnGuardar.OnHoverImage = null;
@@ -380,8 +450,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(740, 355);
+            this.ClientSize = new System.Drawing.Size(740, 392);
             this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.ckSeleccionar);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.gunaLabel4);
@@ -428,8 +500,11 @@
         private Guna.UI.WinForms.GunaTextBox txtidCategoria;
         private Guna.UI.WinForms.GunaVSeparator gunaVSeparator1;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
-        private Guna.UI.WinForms.GunaAdvenceButton btnEliminar;
+        private Guna.UI.WinForms.GunaAdvenceButton btnNuevo;
         private Guna.UI.WinForms.GunaAdvenceButton btnGuardar;
         private System.Windows.Forms.ErrorProvider Error;
+        private Guna.UI.WinForms.GunaAdvenceButton btnEliminar;
+        private Guna.UI.WinForms.GunaCheckBox ckSeleccionar;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminar;
     }
 }

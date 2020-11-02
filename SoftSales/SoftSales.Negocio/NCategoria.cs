@@ -12,7 +12,11 @@ namespace SoftSales.Negocio
             return Datos.Listar();
 
         }
-
+        public static DataTable Buscar(string valor_buscar)
+        {
+            DCategorias Datos = new DCategorias();
+            return Datos.Buscar(valor_buscar);
+        }
         public static string Insertar(string nombre, string descripcion)
         {
             DCategorias Datos = new DCategorias();
@@ -28,6 +32,11 @@ namespace SoftSales.Negocio
                 Obj.Descripcion = descripcion;
                 return Datos.Insertar(Obj);
             }
+        }
+        public static string Eliminar(int idcategoria)
+        {
+            DCategorias Datos = new DCategorias();
+            return Datos.Eliminar(idcategoria);
         }
     }
 }

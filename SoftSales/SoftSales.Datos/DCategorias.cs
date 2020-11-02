@@ -118,5 +118,29 @@ namespace SoftSales.Datos
             }
             return respuesta;
         }
+
+        public string Eliminar(int idcategoria)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection();
+            try
+            {
+                conexion = Conexion.getInstancia().CrearConexion();
+                SqlCommand comando = new SqlCommand("Categorias_Eliminar", conexion);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.Add("@idcategoria", SqlDbType.Int).Value = idcategoria;
+                conexion.Open();
+                respuesta= comando.ExecuteNonQuery() == 1 ? "OK" : "No se pudo eliminar";
+            }
+            catch (Exception ex)
+            {
+                respuesta= ex.Message;
+            }
+            finally
+            {
+                if (conexion.State == ConnectionState.Open) conexion.Close();
+            }
+            return respuesta;
+        }
     }
 }
