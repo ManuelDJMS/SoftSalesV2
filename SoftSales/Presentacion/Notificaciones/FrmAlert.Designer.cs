@@ -68,7 +68,7 @@
             // GunaPictureBox1
             // 
             this.GunaPictureBox1.BaseColor = System.Drawing.Color.White;
-            this.GunaPictureBox1.Image = global::Presentacion.Properties.Resources.icons8_checkmark_48;
+            this.GunaPictureBox1.Image = global::Presentacion.Properties.Resources.icons8_update_48;
             this.GunaPictureBox1.Location = new System.Drawing.Point(17, 21);
             this.GunaPictureBox1.Name = "GunaPictureBox1";
             this.GunaPictureBox1.Size = new System.Drawing.Size(28, 28);
@@ -80,7 +80,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(171)))), ((int)(((byte)(160)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(380, 70);
             this.Controls.Add(this.GunaPictureBox2);
             this.Controls.Add(this.GunaLabel1);

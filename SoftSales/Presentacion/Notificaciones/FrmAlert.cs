@@ -53,20 +53,20 @@ namespace Presentacion.Notificaciones
             {
                 case FrmAlert.alertTypeEnum.Success:
                     this.GunaPictureBox1.Image = Properties.Resources.icons8_checkmark_48;
-                    this.BackColor = Color.FromArgb(42, 171, 160);
+                    this.BackColor = Color.FromArgb(22, 165, 150);
                     break;
                 case FrmAlert.alertTypeEnum.Error:
                     this.GunaPictureBox1.Image = Properties.Resources.icons8_box_important_52;
-                    this.BackColor = Color.FromArgb(255, 121, 70);
+                    this.BackColor = Color.FromArgb(247, 56, 89);
                     break;
-                    //case FrmAlert.alertTypeEnum.Error:
-                    //    this.GunaPictureBox1.Image = Properties.Resources.Error_28px;
-                    //    this.BackColor = Color.FromArgb(255, 179, 2);255, 121, 70
-                    //    break;
-                    //case FrmAlert.alertTypeEnum.Info:
-                    //    this.GunaPictureBox1.Image = Properties.Resources.Info_28px;
-                    //    this.BackColor = Color.FromArgb(71, 169, 248);
-                    //    break;
+                case FrmAlert.alertTypeEnum.Warning:
+                    this.GunaPictureBox1.Image = Properties.Resources.icons8_help_48;
+                    this.BackColor = Color.FromArgb(255, 179, 2); 
+                        break;
+                case FrmAlert.alertTypeEnum.Info:
+                    this.GunaPictureBox1.Image = Properties.Resources.icons8_update_48;
+                    this.BackColor = Color.FromArgb(55, 168, 210);
+                    break;
             }
             this.GunaLabel1.Text = msg;
 

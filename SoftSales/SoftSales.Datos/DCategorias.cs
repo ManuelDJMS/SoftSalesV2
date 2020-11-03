@@ -94,6 +94,80 @@ namespace SoftSales.Datos
             return respuesta;
         }
 
+        public string Actualizar(Categorias Obj)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection();
+            try
+            {
+                conexion = Conexion.getInstancia().CrearConexion();
+                SqlCommand comando = new SqlCommand("Categorias_Actualizar", conexion);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value = Obj.Nombre;
+                comando.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = Obj.Descripcion;
+                comando.Parameters.Add("@idcategoria", SqlDbType.Int).Value = Obj.idCategoria;
+                conexion.Open();
+                respuesta=comando.ExecuteNonQuery()==1 ? "OK" : "No se pudo actualizar la categoría";
+            }
+            catch(Exception ex)
+            {
+                respuesta = ex.Message;
+            }
+            finally
+            {
+                if (conexion.State == ConnectionState.Open) conexion.Close();
+            }
+            return respuesta;
+        }
+
+        public string Activar(int id)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection();
+            try
+            {
+                conexion = Conexion.getInstancia().CrearConexion();
+                SqlCommand comando = new SqlCommand("Categorias_Activar", conexion);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.Add("@idcategoria", SqlDbType.Int).Value = id;
+                conexion.Open();
+                respuesta = comando.ExecuteNonQuery() == 1 ? "OK" : "Error al activar";
+            }
+            catch (Exception ex)
+            {
+                respuesta = ex.Message;
+            }
+            finally
+            {
+                if (conexion.State == ConnectionState.Open) conexion.Close();
+            }
+            return respuesta;
+        }
+
+        public string Desactivar(int id)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection();
+            try
+            {
+                conexion = Conexion.getInstancia().CrearConexion();
+                SqlCommand comando = new SqlCommand("Categorias_Desactivar", conexion);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.Add("@idcategoria", SqlDbType.Int).Value = id;
+                conexion.Open();
+                respuesta = comando.ExecuteNonQuery() == 1 ? "OK" : "Error al desactivar la categoría";
+            }
+            catch (Exception ex)
+            {
+                respuesta = ex.Message;
+            }
+            finally
+            {
+                if (conexion.State == ConnectionState.Open) conexion.Close();
+            }
+            return respuesta;
+        }
+        
         public string Insertar(Categorias Obj)
         {
             string respuesta = "";

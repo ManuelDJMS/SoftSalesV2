@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentacion.Notificaciones
 {
     public partial class FrmQuestionSuccess : Form
     {
-        public FrmQuestionSuccess()
+        public FrmQuestionSuccess(string mensaje)
         {
             InitializeComponent();
+            lbMensaje.Text = mensaje;
         }
-
+        public static void Confirmacion(string mensaje)
+        {
+            FrmQuestionSuccess frm = new FrmQuestionSuccess(mensaje);
+            frm.Show();
+        }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;

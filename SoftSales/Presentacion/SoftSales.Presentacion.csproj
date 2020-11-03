@@ -68,34 +68,34 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmArticulos.cs">
+    <Compile Include="Formularios\FrmArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmArticulos.Designer.cs">
+    <Compile Include="Formularios\FrmArticulos.Designer.cs">
       <DependentUpon>FrmArticulos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCategorias.cs">
+    <Compile Include="Formularios\FrmCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCategorias.Designer.cs">
+    <Compile Include="Formularios\FrmCategorias.Designer.cs">
       <DependentUpon>FrmCategorias.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmHome.cs">
+    <Compile Include="Formularios\FrmHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmHome.Designer.cs">
+    <Compile Include="Formularios\FrmHome.Designer.cs">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmInicio.cs">
+    <Compile Include="Formularios\FrmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmInicio.Designer.cs">
+    <Compile Include="Formularios\FrmInicio.Designer.cs">
       <DependentUpon>FrmInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMenu.cs">
+    <Compile Include="Formularios\FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMenu.Designer.cs">
+    <Compile Include="Formularios\FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Notificaciones\FrmAlert.cs">
@@ -124,19 +124,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmArticulos.resx">
+    <EmbeddedResource Include="Formularios\FrmArticulos.resx">
       <DependentUpon>FrmArticulos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCategorias.resx">
+    <EmbeddedResource Include="Formularios\FrmCategorias.resx">
       <DependentUpon>FrmCategorias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmHome.resx">
+    <EmbeddedResource Include="Formularios\FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmInicio.resx">
+    <EmbeddedResource Include="Formularios\FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMenu.resx">
+    <EmbeddedResource Include="Formularios\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Notificaciones\FrmAlert.resx">
@@ -176,7 +176,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icon_softsales.png" />
+    <None Include="Resources\icons8-update-48.png" />
     <None Include="Resources\icons8-arrow-pointing-left-28.png" />
     <None Include="Resources\LOGO.jpg" />
     <None Include="Resources\LOGO2.jpg" />
@@ -209,9 +209,7 @@
     <None Include="Resources\icons8-ok-64.png" />
     <None Include="Resources\icons8-cancel-64.png" />
     <None Include="Resources\icons8-checkmark-48.png" />
-    <None Include="Resources\icons8-xbox-x-48.png" />
     <None Include="Resources\icons8-ask-question-64.png" />
-    <None Include="Resources\icons8-x-50.png" />
     <None Include="Resources\Multiply_18px.png" />
     <None Include="Resources\icons8-box-important-52.png" />
     <Content Include="LOGO2.ico" />

@@ -36,9 +36,11 @@
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.PanelSuperior = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.btnCerrar = new Guna.UI.WinForms.GunaControlBox();
             this.txtBuscar = new Guna.UI.WinForms.GunaTextBox();
             this.DgCategorias = new Guna.UI.WinForms.GunaDataGridView();
+            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaVSeparator1 = new Guna.UI.WinForms.GunaVSeparator();
@@ -49,17 +51,15 @@
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.Error = new System.Windows.Forms.ErrorProvider(this.components);
             this.ckSeleccionar = new Guna.UI.WinForms.GunaCheckBox();
-            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnEliminar = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnNuevo = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnGuardar = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
-            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.PanelSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgCategorias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Error)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaElipse1
@@ -88,6 +88,17 @@
             this.gunaLabel1.Size = new System.Drawing.Size(84, 21);
             this.gunaLabel1.TabIndex = 3;
             this.gunaLabel1.Text = "Categorías";
+            // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = global::Presentacion.Properties.Resources.icons8_categorize_48;
+            this.gunaPictureBox1.Location = new System.Drawing.Point(2, 1);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(28, 28);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox1.TabIndex = 1;
+            this.gunaPictureBox1.TabStop = false;
             // 
             // btnCerrar
             // 
@@ -190,6 +201,15 @@
             this.DgCategorias.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(215)))), ((int)(((byte)(240)))));
             this.DgCategorias.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.DgCategorias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgCategorias_CellContentClick);
+            this.DgCategorias.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgCategorias_CellDoubleClick);
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Visible = false;
+            this.Eliminar.Width = 61;
             // 
             // gunaDragControl1
             // 
@@ -236,7 +256,7 @@
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.Transparent;
-            this.txtNombre.BaseColor = System.Drawing.Color.White;
+            this.txtNombre.BaseColor = System.Drawing.Color.WhiteSmoke;
             this.txtNombre.BorderColor = System.Drawing.Color.Silver;
             this.txtNombre.BorderSize = 1;
             this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -265,7 +285,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.BackColor = System.Drawing.Color.Transparent;
-            this.txtDescripcion.BaseColor = System.Drawing.Color.White;
+            this.txtDescripcion.BaseColor = System.Drawing.Color.WhiteSmoke;
             this.txtDescripcion.BorderColor = System.Drawing.Color.Silver;
             this.txtDescripcion.BorderSize = 1;
             this.txtDescripcion.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -309,14 +329,6 @@
             this.ckSeleccionar.TabIndex = 296;
             this.ckSeleccionar.Text = "Seleccionar";
             this.ckSeleccionar.CheckedChanged += new System.EventHandler(this.ckSeleccionar_CheckedChanged);
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            this.Eliminar.Visible = false;
-            this.Eliminar.Width = 61;
             // 
             // btnEliminar
             // 
@@ -373,7 +385,7 @@
             this.btnNuevo.Image = global::Presentacion.Properties.Resources.icons8_add_property_48;
             this.btnNuevo.ImageSize = new System.Drawing.Size(20, 20);
             this.btnNuevo.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnNuevo.Location = new System.Drawing.Point(608, 271);
+            this.btnNuevo.Location = new System.Drawing.Point(486, 264);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(77)))), ((int)(((byte)(144)))));
             this.btnNuevo.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -408,7 +420,7 @@
             this.btnGuardar.Image = global::Presentacion.Properties.Resources.icons8_save_all_48;
             this.btnGuardar.ImageSize = new System.Drawing.Size(20, 20);
             this.btnGuardar.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnGuardar.Location = new System.Drawing.Point(491, 271);
+            this.btnGuardar.Location = new System.Drawing.Point(612, 264);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(77)))), ((int)(((byte)(144)))));
             this.btnGuardar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -433,17 +445,6 @@
             this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox2.TabIndex = 2;
             this.gunaPictureBox2.TabStop = false;
-            // 
-            // gunaPictureBox1
-            // 
-            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox1.Image = global::Presentacion.Properties.Resources.icons8_categorize_48;
-            this.gunaPictureBox1.Location = new System.Drawing.Point(2, 1);
-            this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(28, 28);
-            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaPictureBox1.TabIndex = 1;
-            this.gunaPictureBox1.TabStop = false;
             // 
             // FrmCategorias
             // 
@@ -473,10 +474,10 @@
             this.Load += new System.EventHandler(this.FrmCategorias_Load);
             this.PanelSuperior.ResumeLayout(false);
             this.PanelSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgCategorias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Error)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
