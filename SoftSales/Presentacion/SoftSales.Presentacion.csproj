@@ -92,6 +92,18 @@
     <Compile Include="Formularios\FrmInicio.Designer.cs">
       <DependentUpon>FrmInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmMarcas.Designer.cs">
+      <DependentUpon>FrmMarcas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +148,12 @@
     <EmbeddedResource Include="Formularios\FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmMarcas.resx">
+      <DependentUpon>FrmMarcas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +194,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Login_fond.png" />
+    <None Include="Resources\icons8-azure-48 %281%29.png" />
     <None Include="Resources\icons8-update-48.png" />
     <None Include="Resources\icons8-arrow-pointing-left-28.png" />
     <None Include="Resources\LOGO.jpg" />
@@ -215,6 +235,10 @@
     <Content Include="LOGO2.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SoftSales.Datos\SoftSales.Datos.csproj">
+      <Project>{479CFB4F-A918-4466-9626-BB49D8388BDD}</Project>
+      <Name>SoftSales.Datos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SoftSales.Negocio\SoftSales.Negocio.csproj">
       <Project>{F83389BA-D9D5-49D7-8684-7B3454CF2795}</Project>
       <Name>SoftSales.Negocio</Name>

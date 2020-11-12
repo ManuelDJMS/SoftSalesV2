@@ -123,6 +123,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_azure_48__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-azure-48 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_box_important_52 {
             get {
                 object obj = ResourceManager.GetObject("icons8-box-important-52", resourceCulture);
@@ -376,6 +386,16 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap icons8_update_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-update-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login_fond {
+            get {
+                object obj = ResourceManager.GetObject("Login_fond", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
