@@ -16,5 +16,13 @@ namespace Presentacion.Formularios
         {
             InitializeComponent();
         }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+            gunaAnimateWindow1.AnimationType = Guna.UI.WinForms.GunaAnimateWindow.AnimateWindowType.AW_BLEND;
+            gunaAnimateWindow1.Start();
+            Guna.UI.Lib.GraphicsHelper.ShadowForm(this);
+            //Guna.UI.Lib.GraphicsHelper.DrawLineShadow(PanelLateral, Color.Blue, 10, 10, Guna.UI.WinForms.VerHorAlign.VerticalRight);
+        }
     }
 }

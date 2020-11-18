@@ -63,6 +63,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _139__Convertido_ {
+            get {
+                object obj = ResourceManager.GetObject("139 [Convertido]", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_accounting_48__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-accounting-48 (1)", resourceCulture);
@@ -313,6 +323,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_lock_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-lock-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_menu_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-menu-48", resourceCulture);
@@ -393,9 +413,9 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Login_fond {
+        internal static System.Drawing.Bitmap icons8_user_48 {
             get {
-                object obj = ResourceManager.GetObject("Login_fond", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-user-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

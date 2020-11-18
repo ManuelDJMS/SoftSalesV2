@@ -194,7 +194,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Login_fond.png" />
+    <None Include="Resources\icons8-lock-48.png" />
+    <None Include="Resources\icons8-user-48.png" />
+    <None Include="Resources\139 [Convertido].png" />
     <None Include="Resources\icons8-azure-48 %281%29.png" />
     <None Include="Resources\icons8-update-48.png" />
     <None Include="Resources\icons8-arrow-pointing-left-28.png" />

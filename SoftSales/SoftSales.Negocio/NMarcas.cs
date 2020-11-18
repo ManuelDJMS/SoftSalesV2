@@ -15,5 +15,10 @@ namespace SoftSales.Negocio
             DMarcas Marcas = new DMarcas();
             return Marcas.Listar();
         }
+        public static DataTable Buscar(string valor_buscar)
+        {
+            DMarcas Datos = new DMarcas();
+            return Datos.Buscar(valor_buscar);
+        }
     }
 }
