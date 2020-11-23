@@ -71,11 +71,9 @@ namespace Presentacion
                         respuesta = NCategoria.Insertar(txtNombre.Text.Trim(), txtDescripcion.Text.Trim());
                         if (respuesta.Equals("OK"))
                         {
-                            //FrmSuccess.Confirmacion("Guardado Exitoso", "La categoría se guardo correctamente.");
                             this.Alert("Guardado exitosamente", FrmAlert.alertTypeEnum.Success);
                             this.Limpiar();
                             this.Listar();
-                            this.Formato();
 
                         }
                         else
@@ -210,13 +208,13 @@ namespace Presentacion
                 DataGridViewCheckBoxCell ChkEliminar = (DataGridViewCheckBoxCell)DgCategorias.Rows[e.RowIndex].Cells[4];
                 if (check.Equals("True"))
                 {
-                    respuesta = NCategoria.Desactivar(Convert.ToInt32(DgCategorias.Columns[1].Index));
+                    respuesta = NCategoria.Desactivar(Convert.ToInt32(DgCategorias.Rows[e.RowIndex].Cells[1].Value));
                     ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
                     this.Alert("Categoría: " + Convert.ToString(DgCategorias.Rows[e.RowIndex].Cells[2].Value) + " desactivada", FrmAlert.alertTypeEnum.Info);
                 }
                 else
                 {
-                    respuesta = NCategoria.Activar(Convert.ToInt32(DgCategorias.Columns[1].Index));
+                    respuesta = NCategoria.Activar(Convert.ToInt32(DgCategorias.Rows[e.RowIndex].Cells[1].Value));
                     ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
                     this.Alert("Categoría: " + Convert.ToString(DgCategorias.Rows[e.RowIndex].Cells[2].Value) + " activada", FrmAlert.alertTypeEnum.Info);
                 }
